@@ -39,6 +39,8 @@ if options:
         session.sql(my_insert_stmt).collect()
         st.success('Your Smoothie is ordered by'+name_on_the_order, icon="✅")
 
-
+import requests  
+smoothiefroot_response = requests.get("[https://my.smoothiefroot.com/api/fruit/watermelon](https://my.smoothiefroot.com/api/fruit/watermelon)")  
+st.text(smoothiefroot_response)
 
 
