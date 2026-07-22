@@ -29,7 +29,7 @@ if options:
     ingredients_string=''
     for ingredients in options:
         ingredients_string+=ingredients+' '
-      st.subheader( ingredients+ 'Nutrtional Information')
+        st.subheader( ingredients+ 'Nutrtional Information')
         smoothiefroot_response = requests.get("https://my.smoothiefroot.com/api/fruit/"+ingredients)
         sf_df=st.dataframe(data=smoothiefroot_response.json(),use_container_width=True);
     
